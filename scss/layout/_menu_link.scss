@@ -1,0 +1,39 @@
+.menu-link {
+  padding: 90px 0;
+  background-color: $color-dark1-white;
+
+  .link-title {
+    color: $color-teal;
+  }
+
+  .link-tab {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+
+    li {
+      width: 25%;
+      margin-bottom: 25px;
+      text-align: center;
+      border-right: 1px solid $color-teal;
+
+      &:first-child,
+      &:nth-child(5) {
+        border-left: 1px solid $color-teal;
+      }
+    }
+
+    span {
+      display: block;
+      height: 40px;
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: 500;
+      color: $color-teal;
+      &:hover {
+        font-size: 26px;
+        font-weight: 700;
+      }
+    }
+  }
+}

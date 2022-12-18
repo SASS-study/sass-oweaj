@@ -1,0 +1,102 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: $color-white;
+  z-index: 9999;
+
+  .header-top {
+    position: relative;
+    height: 100px;
+
+    .logo {
+      position: absolute;
+      margin: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .header-menu {
+    width: 100%;
+    height: 70px;
+    border-top: 1px solid $color-light1-gray;
+    border-bottom: 1px solid $color-light1-gray;
+    background-color: $color-white;
+
+    .menu-bar {
+      position: relative;
+      display: flex;
+      height: 100%;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .banner {
+      display: flex;
+      width: 90%;
+      height: 100%;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row nowrap;
+    }
+
+    .banner-title {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      > a {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row nowrap;
+        font-size: 20px;
+        font-weight: 600;
+        &:hover,
+        &:focus {
+          border-top: 3px solid $color-light-blue;
+          outline: none;
+        }
+      }
+
+      &:hover .banner-depth {
+        display: block;
+      }
+    }
+
+    .banner-depth {
+      display: none;
+      position: absolute;
+      width: 100%;
+      padding: 10px 0;
+      background-color: $color-white;
+      border: 1px solid $color-light1-gray;
+      line-height: 1.5;
+
+      a {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 18px;
+        text-align: center;
+        &:hover,
+        &:focus {
+          color: $color-light-blue;
+          outline: none;
+        }
+      }
+    }
+
+    .search-btn {
+      width: 40px;
+      height: 40px;
+      border: 0;
+      padding: 40px 0 0;
+      overflow: hidden;
+      background: url(/images/search.svg) no-repeat center;
+      cursor: pointer;
+    }
+  }
+}

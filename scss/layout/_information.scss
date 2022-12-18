@@ -1,0 +1,54 @@
+.info {
+  height: 100%;
+
+  .info-items {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+
+    .in {
+      position: relative;
+      width: 20%;
+      height: 400px;
+      background: linear-gradient(to bottom right, $color-light-blue, $color-light-green, $color-light-blue);
+
+      a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        color: $color-white;
+
+        .item-title {
+          font-size: 28px;
+          font-weight: 700;
+        }
+
+        .item-text {
+          font-size: 20px;
+          margin: 20px;
+          text-align: center;
+          line-height: 1.5;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 45px;
+          height: 45px;
+          right: 25px;
+          bottom: 25px;
+          background: url(/images/add_circle.svg) no-repeat;
+        }
+
+        &:hover {
+          background-color: $color-light-rgba;
+        }
+      }
+    }
+  }
+}

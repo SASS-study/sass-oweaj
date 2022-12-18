@@ -1,0 +1,87 @@
+.history {
+  background: linear-gradient(to bottom right, $color-light-blue, $color-light-green, $color-light-blue);
+
+  .history-area {
+    position: relative;
+    padding: 90px 0;
+
+    .history-title {
+      color: $color-white;
+    }
+
+    .history-items {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      flex-flow: row nowrap;
+      margin: 0 auto;
+
+      .hs {
+        width: 16%;
+      }
+
+      .history-list a {
+        text-align: center;
+      }
+
+      .img-area {
+        height: 220px;
+        border-radius: 20px 20px 0 0;
+        background: linear-gradient(to bottom right, $color-light-blue, $color-light-green, $color-light-blue);
+      }
+
+      .img-text {
+        padding: 30px 10px;
+        line-height: 1.5;
+
+        .hs-img-title {
+          margin-bottom: 5px;
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .slide-btn {
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+
+      .btn {
+        position: relative;
+        width: 45px;
+        height: 45px;
+        border: 1px solid $color-dark2-white;
+        border-radius: 50%;
+        background-color: $color-dark2-white;
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 55%;
+          width: 15px;
+          height: 15px;
+          border-top: 3px solid $color-drak-gray;
+          border-left: 3px solid $color-drak-gray;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+
+      .btn-next.btn::before {
+        content: "";
+        transform: translate(-50%, -50%) rotate(135deg);
+        left: 45%;
+      }
+
+      .btn-prev {
+        margin-right: 10px;
+      }
+
+      .btn-next {
+        margin-left: 10px;
+      }
+    }
+  }
+}
