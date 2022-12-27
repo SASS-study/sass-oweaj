@@ -75,28 +75,29 @@ ul {
   align-items: center;
   flex-flow: row nowrap;
 }
-.header .header-menu .banner-title {
+.header .header-menu .banner .banner-title {
   position: relative;
   width: 100%;
   height: 100%;
 }
-.header .header-menu .banner-title > a {
+.header .header-menu .banner .banner-title > a {
   display: flex;
   height: 100%;
   justify-content: center;
   align-items: center;
   flex-flow: row nowrap;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
 }
-.header .header-menu .banner-title > a:hover, .header .header-menu .banner-title > a:focus {
+.header .header-menu .banner .banner-title > a:hover, .header .header-menu .banner .banner-title > a:focus {
+  padding-bottom: 3px;
   border-top: 3px solid #6495ed;
   outline: none;
 }
-.header .header-menu .banner-title:hover .banner-depth {
+.header .header-menu .banner .banner-title:hover .banner-depth {
   display: block;
 }
-.header .header-menu .banner-depth {
+.header .header-menu .banner .banner-depth {
   display: none;
   position: absolute;
   width: 100%;
@@ -105,14 +106,14 @@ ul {
   border: 1px solid #aaa;
   line-height: 1.5;
 }
-.header .header-menu .banner-depth a {
+.header .header-menu .banner .banner-depth a {
   display: inline-block;
   width: 100%;
   padding: 10px 0;
   font-size: 18px;
   text-align: center;
 }
-.header .header-menu .banner-depth a:hover, .header .header-menu .banner-depth a:focus {
+.header .header-menu .banner .banner-depth a:hover, .header .header-menu .banner .banner-depth a:focus {
   color: #6495ed;
   outline: none;
 }
@@ -167,7 +168,6 @@ ul {
   width: 100%;
   bottom: 0;
   background-color: #767676;
-  display: none;
 }
 .main .main-tabs .tab-list {
   font-size: 0;
@@ -201,32 +201,32 @@ ul {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 0;
+  padding: 90px 0;
 }
 .info .info-items .in {
   position: relative;
-  width: 20%;
+  width: 22%;
   height: 400px;
   background: linear-gradient(to bottom right, #6495ed, #8fbc8b, #6495ed);
 }
 .info .info-items .in a {
   display: flex;
-  width: 100%;
-  height: 100%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-flow: column wrap;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
   color: #fff;
 }
 .info .info-items .in a .item-title {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 .info .info-items .in a .item-text {
-  font-size: 20px;
-  margin: 20px;
   text-align: center;
-  line-height: 1.5;
+  font-size: 18px;
 }
 .info .info-items .in a::after {
   content: "";
@@ -346,18 +346,24 @@ ul {
   text-align: center;
 }
 .history .history-area .history-items .img-area {
-  height: 220px;
   border-radius: 20px 20px 0 0;
-  background: linear-gradient(to bottom right, #6495ed, #8fbc8b, #6495ed);
+  overflow: hidden;
+}
+.history .history-area .history-items .img-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .history .history-area .history-items .img-text {
-  padding: 30px 10px;
+  padding: 25px 10px;
   line-height: 1.5;
 }
 .history .history-area .history-items .img-text .hs-img-title {
   margin-bottom: 5px;
   font-size: 20px;
-  font-weight: 700;
+}
+.history .history-area .history-items .img-text .hs-img-text {
+  color: #aaa;
 }
 .history .history-area .slide-btn {
   position: absolute;
@@ -398,36 +404,34 @@ ul {
 
 .menu-link {
   padding: 90px 0;
+  color: #122f75;
   background-color: #eee;
-}
-.menu-link .link-title {
-  color: #008080;
 }
 .menu-link .link-tab {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   flex-flow: row wrap;
 }
 .menu-link .link-tab li {
   width: 25%;
   margin-bottom: 25px;
   text-align: center;
-  border-right: 1px solid #008080;
+  border-right: 1px solid #122f75;
 }
 .menu-link .link-tab li:first-child, .menu-link .link-tab li:nth-child(5) {
-  border-left: 1px solid #008080;
+  border-left: 1px solid #122f75;
 }
 .menu-link .link-tab span {
   display: block;
   height: 40px;
-  margin-top: 20px;
-  font-size: 22px;
+  margin-top: 10px;
+  font-size: 20px;
   font-weight: 500;
-  color: #008080;
 }
 .menu-link .link-tab span:hover {
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .footer {
@@ -459,6 +463,7 @@ ul {
   border: 1px solid #fff;
   background-color: #3a3d44;
   color: #fff;
+  cursor: pointer;
 }
 .footer .footer-bottom-area {
   border-top: 1px solid #fff;

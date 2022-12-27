@@ -25,19 +25,26 @@
       }
 
       .img-area {
-        height: 220px;
         border-radius: 20px 20px 0 0;
-        background: linear-gradient(to bottom right, $color-light-blue, $color-light-green, $color-light-blue);
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
 
       .img-text {
-        padding: 30px 10px;
+        padding: 25px 10px;
         line-height: 1.5;
 
         .hs-img-title {
           margin-bottom: 5px;
           font-size: 20px;
-          font-weight: 700;
+        }
+
+        .hs-img-text {
+          color: #aaa;
         }
       }
     }
